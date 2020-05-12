@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/cded72ced7.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body onload="main()">
+        <div class="header">
+            <div class="headerInner">
+                <a href="https://github.com/VVaria" target="_blank"><i class="leftIcon fab fa-github"></i></a>
+                <form onsubmit="main(); return false;">
+                    <input id="header_inner_city_search" class="headerInnerCitySearch" type="text" placeholder="Введите город...">
+                    <button class="buttonFind"><i class="butImg fas fa-search-location"></i></button>
+                </form>
+            </div>
+        </div>
+       <div class="main">
+            <div class="mainInner">
+
+                <div class="mainInnerBackground"></div>
+
+                <div class="mainInnerWeather">
+
+                    <div class="mainInnerWeatherCity">
+                        <span id="city-name">city-name</span>
+                    </div>
+
+                    <div class="mainInnerWeatherDataNow">
+                        <span class="mainInnerWeatherDataNow" id="temperature">+0°</span>
+                        <i class="mainInnerWeatherDataNow fas fa-sun" id="icon-condition"></i>
+                        <span class="mainInnerWeatherDataNow" id="condition">condition</span>
+                    </div>
+
+                    <div class="mainInnerWeatherDataOptional">
+                        <i    class="iconsOptional fas fa-wind" title="Скорость ветра"></i>
+                        <span class="textOptional mainInnerWeatherDataOptional" id="wind">0 м/с</span>
+                        <i    class="iconsOptional fas fa-tint" title="Влажность"></i>
+                        <span class="textOptional mainInnerWeatherDataOptional" id="humidity">0%</span>
+                        <i    class="iconsOptional far fa-compass" title="Давление"></i>
+                        <span class="textOptional mainInnerWeatherDataOptional" id="pressure">0 мм рт. ст.</span>
+                    </div>
+
+                    <div id="main-inner-weather-data-5days" class="mainInnerWeatherData5days"></div>
+                        <div id="append" class="next"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+
+</html>

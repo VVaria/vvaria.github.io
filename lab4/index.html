@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-storage.js"></script>
+        <title>Form</title>
+    </head>
+    <body>
+        <div class="formBlock">
+            <div class="title">Оставить заявку на конференцию</div>
+            <form class="formApplication">
+                <div class="formName">
+                    <input class="InputMain" id="name" type="text" required minlength="2" maxlength="30" placeholder="Иван">
+                    <label class="formNameLabel">
+                        ИМЯ
+                        <span class="inputRequired">*</span>
+                    </label>
+                </div>
+
+                <div class="formSurname">
+                    <input class="InputMain" id="surname" type="text" required minlength="2" maxlength="30" placeholder="Иванов">
+                    <label class="formSurnameLabel">
+                        ФАМИЛИЯ
+                        <span class="inputRequired">*</span>
+                    </label>
+                </div>
+
+                <div class="formEmail">
+                    <input class="InputMain" id="email" type="email" required placeholder="ivan21@mail.ru">
+                    <label class="formEmailLabel">
+                        EMAIL
+                        <span class="inputRequired">*</span>
+                    </label>
+                </div>
+
+                <div class="formTelephone">
+                    <input class="InputMain" id="telephone" maxlength="20" type="tel"  placeholder="89160002255">
+                    <label class="formTelephoneLabel">
+                        ТЕЛЕФОН +7-999-999-99-99, 8(999)99-99-99
+                    </label>
+                </div>
+
+                <div class="formComment">
+                    <textarea class="InputMain" id="commentText" type="text" maxlength="500" placeholder="Комментарий"></textarea>
+                    <label class="formCommentLabel">
+                        КОММЕНТАРИЙ
+                    </label>
+                </div>
+
+                <div class="formPhoto">
+                    <label class="formPhotoLabel">
+                        ПРИКРЕПИТЬ ФОТО
+                    </label>
+                    <input class="InputPhoto" id="photo" type="file" accept="image/*">
+                </div>
+            </form>
+            <div class="buttonPush">
+                <button class="button" onclick="main()">ОТПРАВИТЬ ЗАЯВКУ</button>
+            </div>
+            <span id="status" style="margin-top: 10px;"></span>
+        </div>
+        <script>
+            var config = {
+                apiKey: "AIzaSyCPqNOnwyD3F8acjdmfse5U--Z7txcSRVI",
+                authDomain: "formrequests-c3fa2.firebaseapp.com",
+                databaseURL: "https://formrequests-c3fa2.firebaseio.com/",
+                projectId: "formrequests-c3fa2",
+                storageBucket: "formrequests-c3fa2.appspot.com",
+                messagingSenderId: "199613184349",
+                appId: "1:199613184349:web:88c0a73e215d164b4cd0b4"
+            };
+            firebase.initializeApp(config);
+            const db = firebase.firestore();
+        </script>
+        <script src="main.js"></script>
+    </body>
+</html> 

@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    /*background-color: #eceef2;*/
+    background: rgb(57,111,143);
+    background: linear-gradient(0deg, rgba(57,111,143,1) 0%, rgba(142,185,212,1) 70%, rgba(182,214,235,1) 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerInner {
+    width: 70%;
+    height: 100%;
+    background-color: #f6fbff;
+    border-radius: 10px;
+    box-shadow: 14px 14px 28px rgba(0,0,0,0.25), 10px 10px 10px rgba(0,0,0,0.22);
+    /*Если поставить padding, то размер div'a меняется, это является фиксом.*/
+    /*https://stackoverflow.com/questions/779434/how-do-i-prevent-the-padding-property-from-changing-width-or-height-in-css*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    padding-left: 60px;
+    padding-right: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftIcon {
+    color: black;
+    font-size: 40px;
+}
+
+.leftIcon:hover {
+    color: grey;
+}
+
+.buttonFind
+{
+    border-radius: 5px;
+    border: 1px solid darkgray;
+    background-color: rgb(246, 251, 255);
+    box-shadow: 1px 1px 2px 1px darkgray;
+    font-size: 18px;
+    font-family: Palatino, URW Palladio L, serif;
+}
+.buttonFind:hover, .butImg:hover
+{
+    box-shadow: none;
+    color: indigo;
+}
+
+.headerInnerCitySearch {
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 2px 1px lightgray; 
+    border: 1px solid darkgray;
+    font-size: 18px;
+    font-family: Palatino, URW Palladio L, serif;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainInner {
+    width: 70%;
+    height: 800px;
+    margin-bottom: 30px;
+    background-color: floralwhite;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    box-shadow: 14px 14px 28px rgba(0,0,0,0.25), 10px 10px 10px rgba(0,0,0,0.22);
+    justify-content: center;
+    align-items: center;
+}
+
+.mainInnerBackground {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: url(images/background3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    filter: brightness(80%);
+    align-items: center;
+    justify-content: center;
+}
+
+.mainInnerWeather {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    color: white;
+
+    /*Если поставить padding, то размер div'a меняется, это является фиксом.*/
+    /*https://stackoverflow.com/questions/779434/how-do-i-prevent-the-padding-property-from-changing-width-or-height-in-css*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.mainInnerWeatherCity {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.mainInnerWeatherDataNow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#temperature.mainInnerWeatherDataNow
+{
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+#icon-condition.mainInnerWeatherDataNow
+{
+    margin-right: 10px; 
+    font-size: 50px;
+    color: white;
+}
+
+.mainInnerWeatherDataOptional {
+    display: flex;
+    align-items: center;
+}
+
+.iconsOptional {
+    margin-right: 10px;
+    font-size: 30px;
+    color: white;
+    opacity: .7;
+}
+
+.textOptional {
+    margin-right: 10px;
+}
+
+.mainInnerWeatherData5days {
+    background-color: rgba(255, 255, 255, .2);
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 250px;
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.next {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 140px;
+    height: 140px;
+    border-right: 1px solid white;
+}
+
+.weatherDate {
+	height: 19px;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.weatherTime {
+	width: 100%;
+	height: 19px;
+}
+
+.weatherLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+	height: 40px;
+}
+
+.weatherTemp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 19px;
+}
+
+.weatherCondition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 38px;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .headerInner {
+        width: 95%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .mainInner {
+        width: 95%;
+    }
+
+    .mainInnerWeather {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .iconsOptional {
+        margin-right: 5px;
+    }
+
+    .textOptional {
+        margin-right: 5px;
+    }
+}

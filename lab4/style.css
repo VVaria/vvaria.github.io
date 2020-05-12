@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    color: #AFAFAF;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formBlock {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    width: 650px;
+    height: 820px;
+    flex-direction: column;
+    background-color: #292a2beb;
+    border-radius: 20px
+}
+
+.title {
+    padding-top: 20px;
+    font-size: 38px;
+    font-weight: 200;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.formApplication {
+    align-items: center;
+    margin-bottom: 30px;
+    width: 500px;
+}
+
+.formName, .formSurname, .formEmail, .formTelephone {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 40px;
+}
+
+.formComment {
+    width: 100%;
+    height: 140px;
+    margin-bottom: 40px;
+}
+
+.InputMain {
+    color: #AFAFAF;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 200;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    padding-left: 5px;
+    border-bottom: 2px solid rgb(95, 73, 185);
+    background-color: rgba(123, 110, 120, 0.36);
+}
+
+.formNameLabel, .formSurnameLabel, .formEmailLabel, .formCommentLabel, .formTelephoneLabel, .formPhotoLabel {
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.inputRequired {
+    color: red;
+    padding-left: -1px;
+}
+
+.formPhoto {
+    margin-bottom: 10px;
+    padding-top: 20px;
+    width: 508px;
+}
+
+.InputPhoto[type=file] {
+    margin-left: 13px;
+    width: 66%;
+    border-bottom: 2px solid rgb(95, 73, 185);
+    background-color: rgba(123, 110, 120, 0.36);
+}
+
+.button {
+	background:linear-gradient(to bottom, #a866ff 5%, #917ac2 100%);
+	background-color:#a866ff;
+	border-radius:8px;
+	cursor:pointer;
+	color:#ffffff;
+    font-size:26px;
+    letter-spacing: 2px;
+    padding:13px 32px;
+    border: 1px solid white;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #917ac2 5%, #a866ff 100%);
+	background-color:#917ac2;
+}
+ 
+@media only screen and (max-width: 1000px)
+{
+    .formBlock{
+        width: 85%;
+        margin-top: 200px;
+    }
+    
+    .formApplication{
+        width: 85%;
+    }
+}
